@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset='UTF-8' />
+  <title>App</title>
+  <link rel="stylesheet" href="./index.css" />
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gdal3.js@2.4.0/dist/package/gdal3.js"
+    integrity="sha384-XlqVvSG4V8zz8Kdw95OpRdsWyJnWE5QUZy++BeAIEVb+f2n5RM7jdbZh5lm0pHWk"
+    crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="./data/dataPrueba.js"></script>
+</head>
+
+<body>
+  <script type="module" src='app.js'></script>
+  <div id="map" style="z-index: 0;"></div>
+
+  <div style="position: absolute; z-index: 1; bottom: 0;right: 0; background-color: white; padding: 10px; border-radius: 10px; width: 200px; margin-right: 10px; margin-bottom: 30px;">
+
+    Algorithm selector:<br>
+    <form name="algorithmForm">
+      <input type="radio" name="algorithm" value="min" checked>Min Algorithm<br>
+      <input type="radio" name="algorithm" value="max">Max Algorithm<br>
+      <input type="radio" name="algorithm" value="mean">Mean Algorithm<br>
+      <br>
+    </form>
+
+    Color ramp:<br>
+    <form name="colorRampForm">
+      <input type="radio" name="color" value="more" checked>More details<br>
+      <input type="radio" name="color" value="minus">Minor details<br>
+      <br>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
